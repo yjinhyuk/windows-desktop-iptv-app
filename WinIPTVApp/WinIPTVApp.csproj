@@ -130,9 +130,13 @@
     <Compile Include="Dialogs\References\IDialogService.cs" />
     <Compile Include="Dialogs\References\IDialogWindow.cs" />
     <Compile Include="Messages\AuthenticateSuccessMessage.cs" />
+    <Compile Include="Pages\Login\ViewModels\LoadAccountInfoViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginConductorViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginFormViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\SelectUserViewModel.cs" />
+    <Compile Include="Pages\Login\Views\LoadAccountInfoView.xaml.cs">
+      <DependentUpon>LoadAccountInfoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login\Views\LoginConductorView.xaml.cs">
       <DependentUpon>LoginConductorView.xaml</DependentUpon>
     </Compile>
@@ -183,6 +187,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\References\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Login\Views\LoadAccountInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

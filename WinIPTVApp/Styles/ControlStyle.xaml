@@ -64,6 +64,20 @@
         </Style.Triggers>
     </Style>
 
+    <Style TargetType="ProgressBar" x:Key="CornerProgressBar">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Border BorderBrush="#BBC6C4" BorderThickness="1" CornerRadius="3" Padding="1">
+                        <Grid x:Name="PART_Track">
+                            <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left" RadiusX="5" RadiusY="5" Fill="{DynamicResource white_200}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="ContentControl" x:Key="BorderContentControl">
         <Setter Property="Background" Value="Transparent" />
     </Style>
