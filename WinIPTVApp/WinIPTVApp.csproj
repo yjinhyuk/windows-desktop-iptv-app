@@ -79,6 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Configuration.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginConductorViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginFormViewModel.cs" />
     <Compile Include="Pages\Login\Views\LoginConductorView.xaml.cs">
@@ -87,6 +88,8 @@
     <Compile Include="Pages\Login\Views\LoginFormView.xaml.cs">
       <DependentUpon>LoginFormView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\XCService\XCAPI.cs" />
+    <Compile Include="Services\XCService\XCUser.cs" />
     <Compile Include="ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -108,7 +111,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -174,7 +177,9 @@
     <None Include="Resources\home_active.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />

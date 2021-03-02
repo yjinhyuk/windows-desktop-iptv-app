@@ -10,12 +10,14 @@ namespace WinIPTVApp.Pages.Login.ViewModels
     public class LoginConductorViewModel:Conductor<Screen>.Collection.OneActive
     {
         private readonly IEventAggregator _eventAggregator;
+        private readonly LoginFormViewModel _loginFormViewModel;
         
-        public LoginConductorViewModel(IEventAggregator eventAggregator)
+        public LoginConductorViewModel(IEventAggregator eventAggregator, LoginFormViewModel loginFormViewModel)
         {
             _eventAggregator = eventAggregator;
+            _loginFormViewModel = loginFormViewModel;
 
-            Items.AddRange(new Screen[] { });
+            Items.AddRange(new Screen[] { _loginFormViewModel });
         }
 
         protected override void OnActivate()
@@ -23,7 +25,7 @@ namespace WinIPTVApp.Pages.Login.ViewModels
             base.OnActivate();
 
             _eventAggregator.Subscribe(this);
-            
+            ActivateItem(_loginFormViewModel);
         }
 
         protected override void OnDeactivate(bool close)

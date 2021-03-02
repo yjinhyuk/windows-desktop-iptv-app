@@ -24,5 +24,42 @@ namespace WinIPTVApp.Pages.Login.Views
         {
             InitializeComponent();
         }
+
+        public void UsernameGotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb_Username = (TextBox)sender;
+            if (tb_Username.Text.Equals("Username"))
+            {
+                tb_Username.Text = "";
+            }
+        }
+
+        public void UsernameLostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb_Username = (TextBox)sender;
+            if (string.IsNullOrEmpty(tb_Username.Text))
+            {
+                tb_Username.Text = "Username";
+            }
+        }
+
+        public void PasswordGotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb_Password = (TextBox)sender;
+            if (tb_Password.Text.Equals("Password"))
+            {
+                tb_Password.Text = "";
+            }
+        }
+
+        public void PasswordLostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb_Password = (TextBox)sender;
+            if (string.IsNullOrEmpty(tb_Password.Text))
+            {
+                tb_Password.Text = "Password";
+            }
+        }
+
     }
 }

@@ -26,7 +26,7 @@ namespace WinIPTVApp.Pages.Login.ViewModels
                 return;
             } else
             {
-                
+                return;
             }
         }
     }

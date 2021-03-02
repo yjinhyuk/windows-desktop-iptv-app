@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WinIPTVApp.Pages.Login.ViewModels;
 
 namespace WinIPTVApp
 {
@@ -24,6 +25,7 @@ namespace WinIPTVApp
         protected override void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterType<ShellViewModel>().SingleInstance();
+            builder.RegisterType<LoginConductorViewModel>().SingleInstance();
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
