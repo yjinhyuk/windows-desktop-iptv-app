@@ -6,6 +6,7 @@
     <SolidColorBrush x:Key="black_200" Color="#2F3136" />
     <SolidColorBrush x:Key="orange" Color="#EB761C" />
     <SolidColorBrush x:Key="gray" Color="#808182" />
+    <SolidColorBrush x:Key="gray_100" Color="#707070" />
     <SolidColorBrush x:Key="red_200" Color="#A53232" />
     <SolidColorBrush x:Key="white_100" Color="#F5F5F5" />
     <SolidColorBrush x:Key="white" Color="#FFFFFF" />

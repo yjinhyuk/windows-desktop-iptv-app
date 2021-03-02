@@ -129,13 +129,18 @@
     </Compile>
     <Compile Include="Dialogs\References\IDialogService.cs" />
     <Compile Include="Dialogs\References\IDialogWindow.cs" />
+    <Compile Include="Messages\AuthenticateSuccessMessage.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginConductorViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginFormViewModel.cs" />
+    <Compile Include="Pages\Login\ViewModels\SelectUserViewModel.cs" />
     <Compile Include="Pages\Login\Views\LoginConductorView.xaml.cs">
       <DependentUpon>LoginConductorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login\Views\LoginFormView.xaml.cs">
       <DependentUpon>LoginFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login\Views\SelectUserView.xaml.cs">
+      <DependentUpon>SelectUserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\XCService\XCAPI.cs" />
     <Compile Include="Services\XCService\XCUser.cs" />
@@ -186,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Login\Views\LoginFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Login\Views\SelectUserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

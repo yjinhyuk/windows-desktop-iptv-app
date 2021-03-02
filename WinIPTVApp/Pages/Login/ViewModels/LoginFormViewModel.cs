@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WinIPTVApp.Dialogs.AlertDialog;
 using WinIPTVApp.Dialogs.References;
+using WinIPTVApp.Messages;
 using WinIPTVApp.Services.XCService;
 
 namespace WinIPTVApp.Pages.Login.ViewModels
@@ -88,7 +89,7 @@ namespace WinIPTVApp.Pages.Login.ViewModels
 
                         // Global.currentUser = xcUser;
 
-                        // _eventAggregator.PublishOnUIThread(new SuccessAuthenticatedMessage());
+                        _eventAggregator.PublishOnUIThread(new AuthenticateSuccessMessage());
                     }
                 }
                 return;
