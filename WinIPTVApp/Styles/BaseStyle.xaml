@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WinIPTVApp.Styles">
     <SolidColorBrush x:Key="black" Color="#000000" />
-    <SolidColorBrush x:Key="black_100" Color="#262A2D" />
+    <SolidColorBrush x:Key="black_100" Color="#262B2A" />
     <SolidColorBrush x:Key="black_200" Color="#2F3136" />
     <SolidColorBrush x:Key="orange_100" Color="#EB761C" />
     <SolidColorBrush x:Key="gray" Color="#808182" />
