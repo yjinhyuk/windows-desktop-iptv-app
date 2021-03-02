@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WinIPTVApp.Styles">
+    <Style TargetType="Window" x:Key="InitWindow">
+        <Setter Property="Background" Value="{DynamicResource black_100}" />
+        <Setter Property="WindowState" Value="Maximized" />
+        <Setter Property="WindowStyle" Value="None" />
+    </Style>
+</ResourceDictionary>
