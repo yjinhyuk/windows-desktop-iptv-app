@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinIPTVApp
+namespace WinIPTVApp.Dialogs
 {
-    public class Configuration
+    public enum DialogResult
     {
-        public static string xtream_service_url = "http://hd.qweret.com:80/";
+        Undefined,
+        Yes,
+        No
     }
 }
