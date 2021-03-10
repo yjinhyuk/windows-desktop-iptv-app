@@ -31,13 +31,19 @@ namespace WinIPTVApp.Pages.Content.Views
             string nameListItem = (string)listViewItem.GetType().GetProperty("Name").GetValue(listViewItem, null);
             switch (nameListItem)
             {
-                case "HomeListItem":
-                    
+                case "HomeListViewItem":
                     break;
-                case "LiveListItem":
-                    
+                case "LiveListViewItem":
                     break;
-                case "MovieListItem":
+                case "MovieListViewItem":
+                    break;
+                case "SerieListViewItem":
+                    break;
+                case "RadioListViewItem":
+                    break;
+                case "RecordingListViewItem":
+                    break;
+                case "FavoriteListViewItem":
                     break;
             }
         }
@@ -50,7 +56,18 @@ namespace WinIPTVApp.Pages.Content.Views
             switch (nameListViewItem)
             {
                 case "HomeListViewItem":
-                    
+                    break;
+                case "LiveListViewItem":
+                    break;
+                case "MovieListViewItem":
+                    break;
+                case "SerieListViewItem":
+                    break;
+                case "RadioListViewItem":
+                    break;
+                case "RecordingListViewItem":
+                    break;
+                case "FavoriteListViewItem":
                     break;
             }
         }

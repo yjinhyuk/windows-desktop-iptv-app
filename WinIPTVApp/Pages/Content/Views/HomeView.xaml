@@ -42,13 +42,11 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Center">
                 <ListViewItem HorizontalAlignment="Left" Margin="0 0 0 16" MouseEnter="ListViewItem_MouseEnter" 
                               MouseLeave="ListViewItem_MouseLeave" x:Name="HomeListViewItem">
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal" Width="280">
-                            <Image Source="pack://siteoforigin:,,,/Resources/home.png" Stretch="None" 
-                                   Margin="22 0 0 0" Width="25" Height="22" x:Name="HomeImage"/>
-                            <TextBlock x:Name="HomeText" Text="H O M E" Margin="22,0,0,0" FontSize="20" 
-                                       Foreground="#808182" VerticalAlignment="Center"/>
-                        </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="280">
+                        <Image Source="pack://siteoforigin:,,,/Resources/home.png" Stretch="None" 
+                                Margin="22 0 0 0" Width="25" Height="22" x:Name="HomeImage"/>
+                        <TextBlock x:Name="HomeText" Text="H O M E" Margin="22,0,0,0" FontSize="20" 
+                                Foreground="#808182" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem HorizontalAlignment="Left" Margin="0 0 0 16" MouseEnter="ListViewItem_MouseEnter" 
