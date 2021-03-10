@@ -12,10 +12,12 @@
                 <ResourceDictionary Source="Styles/BaseStyle.xaml" />
                 <ResourceDictionary Source="Styles/ControlStyle.xaml" />
                 <ResourceDictionary Source="Styles/WindowStyle.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type alert:AlertDialogViewModel}">
                 <alert:AlertDialogView />
             </DataTemplate>
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
