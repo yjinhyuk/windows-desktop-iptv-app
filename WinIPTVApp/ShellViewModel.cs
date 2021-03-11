@@ -35,7 +35,8 @@ namespace WinIPTVApp
             base.OnActivate(); 
 
             _eventAggregator.Subscribe(this);
-            ActivateItem(_loginConductorViewModel);
+            ActivateItem(_contentConductorViewModel);
+            //ActivateItem(_loginConductorViewModel);
             
         }
 

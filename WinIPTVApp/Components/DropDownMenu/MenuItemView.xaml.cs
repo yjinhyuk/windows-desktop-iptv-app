@@ -21,14 +21,26 @@ namespace WinIPTVApp.Pages.Content.Views
     /// </summary>
     public partial class MenuItemUserControl : UserControl
     {
-        public MenuItemUserControl(ItemMenu itemMenu)
+        private ItemMenu itemMenu;
+        public MenuItemUserControl(ItemMenu item_menu)
         {
             InitializeComponent();
 
+            itemMenu = item_menu;
+
+            //Set the Icon of List Header
+            Icon.Source = new BitmapImage(new Uri($"pack://application:,,,/Resources/{itemMenu.Icon}.png"));
+
+            //Set the DropDown Sublists
             ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
             ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
 
             this.DataContext = itemMenu;
+        }
+
+        private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Icon.Source = new BitmapImage(new Uri($"pack://application:,,,/Resources/{itemMenu.Icon}_active.png"));
         }
     }
 }

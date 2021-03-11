@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="WinIPTVApp.Pages.Content.Views.MenuItemUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WinIPTVApp.Pages.Content.Views"
+             mc:Ignorable="d">
+    <Grid HorizontalAlignment="Left" Margin="0 0 0 36">
+        <StackPanel Orientation="Horizontal" Width="280" UIElement.PreviewMouseDown="StackPanel_PreviewMouseDown">
+            <Image x:Name="Icon" Margin="30 0 0 0" Stretch="None"/>
+            <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" 
+                         VerticalAlignment="Center" FontSize="20" Foreground="{DynamicResource gray}"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="22 0 0 0"/>
+            <Expander x:Name="ExpanderMenu" Header="{Binding Path=Header}" IsExpanded="False" 
+                      VerticalAlignment="Top" FontSize="20"  Foreground="{DynamicResource gray}"
+                      Margin="26 0 0 0" Style="{DynamicResource NoToggleButtonExpander}">
+                <ListView x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" 
+                          Background="Transparent" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom"
+                          BorderBrush="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</UserControl>

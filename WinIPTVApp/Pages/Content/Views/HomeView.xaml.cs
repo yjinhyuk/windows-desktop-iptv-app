@@ -21,98 +21,56 @@ namespace WinIPTVApp.Pages.Content.Views
     /// </summary>
     public partial class HomeView : UserControl
     {
+        public int SelectedIndex;
+
+        
+
         public HomeView()
         {
             InitializeComponent();
 
-            var menuRegister = new List<SubItem>();
-            menuRegister.Add(new SubItem("Customer"));
-            menuRegister.Add(new SubItem("Providers"));
-            menuRegister.Add(new SubItem("Employees"));
-            menuRegister.Add(new SubItem("Products"));
-            var item0 = new ItemMenu("Register", menuRegister, "register");
+            var homeMenuHeader = new List<SubItem>();
+            homeMenuHeader.Add(new SubItem("Customer"));
+            homeMenuHeader.Add(new SubItem("Providers"));
+            homeMenuHeader.Add(new SubItem("Employees"));
+            homeMenuHeader.Add(new SubItem("Products"));
+            var item0 = new ItemMenu("Home", homeMenuHeader, "home", 0);
 
-            var menuSchedule = new List<SubItem>();
-            menuSchedule.Add(new SubItem("Services"));
-            menuSchedule.Add(new SubItem("Meetings"));
-            var item1 = new ItemMenu("Appointments", menuSchedule, "schedule");
+            var liveMenuHeader = new List<SubItem>();
+            liveMenuHeader.Add(new SubItem("Services"));
+            liveMenuHeader.Add(new SubItem("Meetings"));
+            var item1 = new ItemMenu("live TV", liveMenuHeader, "monitor", 1);
 
-            var menuReports = new List<SubItem>();
-            menuReports.Add(new SubItem("Customers"));
-            menuReports.Add(new SubItem("Providers"));
-            menuReports.Add(new SubItem("Products"));
-            menuReports.Add(new SubItem("Stocks"));
-            menuReports.Add(new SubItem("Sales"));
-            var item2 = new ItemMenu("Reports", menuReports, "reports");
+            var movieMenuHeader = new List<SubItem>();
+            movieMenuHeader.Add(new SubItem("Customers"));
+            movieMenuHeader.Add(new SubItem("Providers"));
+            movieMenuHeader.Add(new SubItem("Products"));
+            movieMenuHeader.Add(new SubItem("Stocks"));
+            movieMenuHeader.Add(new SubItem("Sales"));
+            var item2 = new ItemMenu("movies", movieMenuHeader, "movie", 2);
 
-            var menuExpress = new List<SubItem>();
-            menuExpress.Add(new SubItem("Customer"));
-            menuExpress.Add(new SubItem("Providers"));
-            menuExpress.Add(new SubItem("Employees"));
-            menuExpress.Add(new SubItem("Products"));
-            var item3 = new ItemMenu("Express", menuExpress, "register");
+            var serieMenuHeader = new List<SubItem>();
+            serieMenuHeader.Add(new SubItem("Customer"));
+            serieMenuHeader.Add(new SubItem("Providers"));
+            serieMenuHeader.Add(new SubItem("Employees"));
+            serieMenuHeader.Add(new SubItem("Products"));
+            var item3 = new ItemMenu("tv_series", serieMenuHeader, "tv_series", 3);
 
-            var menuFinancial = new List<SubItem>();
-            menuFinancial.Add(new SubItem("Cash Flow"));
+            var radioMenuHeader = new List<SubItem>();
+            radioMenuHeader.Add(new SubItem("Cash Flow"));
+            var item4 = new ItemMenu("radio", radioMenuHeader, "radio", 4);
 
-            var item4 = new ItemMenu("Finanical", menuFinancial, "financial");
+            var item5 = new ItemMenu("Recordings", new UserControl(), "record", 5);
 
-            var item5 = new ItemMenu("Dashboard", new UserControl(), "dashboard");
+            var item6 = new ItemMenu("Favorite", new UserControl(), "favorite", 6);
 
-            Menu.Children.Add(new MenuItemUserControl(item0));
-            Menu.Children.Add(new MenuItemUserControl(item1));
-            Menu.Children.Add(new MenuItemUserControl(item2));
-            Menu.Children.Add(new MenuItemUserControl(item3));
-            Menu.Children.Add(new MenuItemUserControl(item4));
-            Menu.Children.Add(new MenuItemUserControl(item5));
-
-        }
-
-        private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
-        {
-            ListViewItem listViewItem = (ListViewItem)sender;
-            string nameListItem = (string)listViewItem.GetType().GetProperty("Name").GetValue(listViewItem, null);
-            switch (nameListItem)
-            {
-                case "HomeListViewItem":
-                    break;
-                case "LiveListViewItem":
-                    break;
-                case "MovieListViewItem":
-                    break;
-                case "SerieListViewItem":
-                    break;
-                case "RadioListViewItem":
-                    break;
-                case "RecordingListViewItem":
-                    break;
-                case "FavoriteListViewItem":
-                    break;
-            }
-        }
-
-        private void ListViewItem_MouseLeave(object sender, MouseEventArgs e)
-        {
-            ListViewItem listViewItem = (ListViewItem)sender;
-            string nameListViewItem = (string)listViewItem.GetType().GetProperty("Name").GetValue(listViewItem, null);
-
-            switch (nameListViewItem)
-            {
-                case "HomeListViewItem":
-                    break;
-                case "LiveListViewItem":
-                    break;
-                case "MovieListViewItem":
-                    break;
-                case "SerieListViewItem":
-                    break;
-                case "RadioListViewItem":
-                    break;
-                case "RecordingListViewItem":
-                    break;
-                case "FavoriteListViewItem":
-                    break;
-            }
+            DropDownMenu.Children.Add(new MenuItemUserControl(item0));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item1));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item2));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item3));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item4));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item5));
+            DropDownMenu.Children.Add(new MenuItemUserControl(item6));
         }
     }
 }

@@ -138,16 +138,16 @@
     <Compile Include="Messages\LoadAccountSuccessMessage.cs" />
     <Compile Include="Pages\Content\ViewModels\ContentConductorViewModel.cs" />
     <Compile Include="Pages\Content\ViewModels\HomeViewModel.cs" />
-    <Compile Include="Pages\Content\ViewModels\ItemMenu.cs" />
-    <Compile Include="Pages\Content\ViewModels\SubItem.cs" />
+    <Compile Include="Components\DropDownMenu\MenuItemViewModel.cs" />
+    <Compile Include="Components\DropDownMenu\SubItem.cs" />
     <Compile Include="Pages\Content\Views\ContentConductorView.xaml.cs">
       <DependentUpon>ContentConductorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Content\Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Content\Views\MenuItemUserControl.xaml.cs">
-      <DependentUpon>MenuItemUserControl.xaml</DependentUpon>
+    <Compile Include="Components\DropDownMenu\MenuItemView.xaml.cs">
+      <DependentUpon>MenuItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login\ViewModels\LoadAccountInfoViewModel.cs" />
     <Compile Include="Pages\Login\ViewModels\LoginConductorViewModel.cs" />
@@ -217,7 +217,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Content\Views\MenuItemUserControl.xaml">
+    <Page Include="Components\DropDownMenu\MenuItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -249,6 +249,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Components\DropDownMenu\DropDownListStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\WindowStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,154 +263,154 @@
     <Folder Include="Pages\Login\Models\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\brand_logo.png">
+    <Resource Include="Resources\brand_logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close.png">
+    <Resource Include="Resources\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\credit-card.png">
+    <Resource Include="Resources\credit-card.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\credit-card_checked.png">
+    <Resource Include="Resources\credit-card_checked.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\favorite.png">
+    <Resource Include="Resources\favorite.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\favorite_active.png">
+    <Resource Include="Resources\favorite_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png">
+    <Resource Include="Resources\home.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home_active.png">
+    <Resource Include="Resources\home_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png">
+    <Resource Include="Resources\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logout.png">
+    <Resource Include="Resources\logout.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\menu.png">
+    <Resource Include="Resources\menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\monitor.png">
+    <Resource Include="Resources\monitor.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\monitor_active.png">
+    <Resource Include="Resources\monitor_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\monitor_active%402x.png">
+    <Resource Include="Resources\monitor_active%402x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\movie.png">
+    <Resource Include="Resources\movie.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\movie_active.png">
+    <Resource Include="Resources\movie_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\paypal.png">
+    <Resource Include="Resources\paypal.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\paypal_uncheck.png">
+    <Resource Include="Resources\paypal_uncheck.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plus.png">
+    <Resource Include="Resources\plus.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\radio.png">
+    <Resource Include="Resources\radio.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\radio_active.png">
+    <Resource Include="Resources\radio_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Record.png">
+    <Resource Include="Resources\record.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Record_active.png">
+    <Resource Include="Resources\record_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\seperator_line.png">
+    <Resource Include="Resources\seperator_line.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\setting.png">
+    <Resource Include="Resources\setting.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tick.png">
+    <Resource Include="Resources\tick.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tv_series.png">
+    <Resource Include="Resources\tv_series.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tv_series_active.png">
+    <Resource Include="Resources\tv_series_active.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unchecked.png">
+    <Resource Include="Resources\unchecked.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png">
+    <Resource Include="Resources\user.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

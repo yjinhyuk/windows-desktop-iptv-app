@@ -34,6 +34,7 @@
                 <RowDefinition Height="884*" />
                 <RowDefinition Height="41" />
             </Grid.RowDefinitions>
+            <!--Make the Top Log-->
             <Grid  VerticalAlignment="Top" Margin="0 32 0 0" Grid.Row="0">
                 <TextBlock Margin="82,82,0,0" Text="S T R I M O" Foreground="#808182"
                            FontSize="25" Background="Transparent" HorizontalAlignment="Left" 
@@ -46,12 +47,25 @@
                 <Image Source="pack://siteoforigin:,,,/Resources/logo.png" Width="50.55" 
                        VerticalAlignment="Center"/>
             </Grid>
-            <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" 
-                          VerticalScrollBarVisibility="Disabled" Grid.Row="1" VerticalAlignment="Center">
-                <StackPanel x:Name="Menu" Margin="10">
-                    
-                </StackPanel>
+            
+            <!--Make the DropDownMenuList-->
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center" >
+                <StackPanel x:Name="DropDownMenu" VerticalAlignment="Center" Background="Transparent" />
             </ScrollViewer>
+            
+            <!--Make the Responsive Settings/PowerButtons-->
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                    </Grid>
+                    <Grid Grid.Column="1">
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>
