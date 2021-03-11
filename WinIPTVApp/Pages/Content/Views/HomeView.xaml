@@ -49,8 +49,10 @@
             </Grid>
             
             <!--Make the DropDownMenuList-->
-            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center" >
-                <StackPanel x:Name="DropDownMenu" VerticalAlignment="Center" Background="Transparent" />
+            <ScrollViewer 
+                x:Name="Navigation_Pane" Grid.Row="1" VerticalAlignment="Center" 
+                HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" >
+                <StackPanel x:Name="Menus" VerticalAlignment="Center" Background="Transparent" />
             </ScrollViewer>
             
             <!--Make the Responsive Settings/PowerButtons-->

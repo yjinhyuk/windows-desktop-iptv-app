@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace WinIPTVApp.Pages.Content.ViewModels
+namespace WinIPTVApp.Components.DropDownMenu
 {
-    public class ItemMenu
+    public class MenuItemViewModel
     {
-        public ItemMenu(string header, List<SubItem> subItems, string icon, int index)
+        public MenuItemViewModel(string header, List<SubItem> subItems, string icon, int index)
         {
             Header = header;
             SubItems = subItems;
@@ -17,7 +17,7 @@ namespace WinIPTVApp.Pages.Content.ViewModels
             Index = index;
         }
 
-        public ItemMenu(string header, UserControl screen, string icon, int index)
+        public MenuItemViewModel(string header, UserControl screen, string icon, int index)
         {
             Header = header;
             Screen = screen;

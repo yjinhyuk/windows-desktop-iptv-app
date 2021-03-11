@@ -11,6 +11,8 @@ namespace WinIPTVApp.Pages.Content.ViewModels
     public class HomeViewModel : Screen
     {
         private readonly IEventAggregator _eventAggregator;
+
+
         public HomeViewModel(IEventAggregator eventAggregator)
         {
             _eventAggregator = eventAggregator;
@@ -19,7 +21,6 @@ namespace WinIPTVApp.Pages.Content.ViewModels
         protected override void OnActivate()
         {
             base.OnActivate();
-
         }
 
         protected override void OnDeactivate(bool close)

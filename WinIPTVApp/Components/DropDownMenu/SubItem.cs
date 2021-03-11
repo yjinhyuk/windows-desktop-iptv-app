@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace WinIPTVApp.Pages.Content.ViewModels
+namespace WinIPTVApp.Components.DropDownMenu
 {
     public class SubItem
     {

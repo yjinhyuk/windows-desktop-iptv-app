@@ -14,15 +14,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WinIPTVApp.Pages.Content.ViewModels;
 
-namespace WinIPTVApp.Pages.Content.Views
+namespace WinIPTVApp.Components.DropDownMenu
 {
     /// <summary>
     /// Interaction logic for MenuItemUserControl.xaml
     /// </summary>
-    public partial class MenuItemUserControl : UserControl
+    public partial class MenuItemView : UserControl
     {
-        private ItemMenu itemMenu;
-        public MenuItemUserControl(ItemMenu item_menu)
+        private MenuItemViewModel itemMenu;
+        public MenuItemView(MenuItemViewModel item_menu)
         {
             InitializeComponent();
 
@@ -40,7 +40,14 @@ namespace WinIPTVApp.Pages.Content.Views
 
         private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            Icon.Source = new BitmapImage(new Uri($"pack://application:,,,/Resources/{itemMenu.Icon}_active.png"));
+            if (itemMenu.Index != Globals.selected_menu_index)
+            {
+                Icon.Source = new BitmapImage(new Uri($"pack://application:,,,/Resources/{itemMenu.Icon}_active.png"));
+            } 
+
+            Globals.selected_menu_index = itemMenu.Index;
+            
+            
         }
     }
 }

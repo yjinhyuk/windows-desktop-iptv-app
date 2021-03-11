@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="Dialogs\References\IDialogService.cs" />
     <Compile Include="Dialogs\References\IDialogWindow.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="Messages\AuthenticateSuccessMessage.cs" />
     <Compile Include="Messages\LoadAccountSuccessMessage.cs" />
     <Compile Include="Pages\Content\ViewModels\ContentConductorViewModel.cs" />
