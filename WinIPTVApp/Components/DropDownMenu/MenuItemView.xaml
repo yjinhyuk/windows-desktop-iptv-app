@@ -8,18 +8,18 @@
     <Grid HorizontalAlignment="Left" Margin="0 0 0 36">
         <StackPanel Orientation="Horizontal" Width="280" UIElement.PreviewMouseDown="StackPanel_PreviewMouseDown">
             <Image x:Name="Icon" Margin="30 0 0 0" Stretch="None"/>
-            <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" 
+            <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" Typography.Capitals="AllSmallCaps"
                          VerticalAlignment="Center" FontSize="20" Foreground="{DynamicResource gray}"
-                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="22 0 0 0"/>
-            <Expander x:Name="ExpanderMenu" Header="{Binding Path=Header}" IsExpanded="False" 
-                      VerticalAlignment="Top" FontSize="20"  Foreground="{DynamicResource gray}"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="22 0 0 0" />
+            <Expander x:Name="ExpanderMenu" Header="{Binding Path=Header}" Typography.Capitals="AllSmallCaps" 
+                      IsExpanded="False" VerticalAlignment="Top" FontSize="20"  Foreground="{DynamicResource gray}"
                       Margin="26 0 0 0" Style="{DynamicResource NoToggleButtonExpander}">
                 <ListView x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" 
                           Background="Transparent" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom"
                           BorderBrush="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Path=Name}" />
+                            <TextBlock Text="{Binding Path=Name}" Typography.Capitals="AllSmallCaps" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
